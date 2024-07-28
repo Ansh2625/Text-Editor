@@ -3,6 +3,11 @@ const undoB = document.getElementById('undo');
 const redoB = document.getElementById('redo');
 const boldB = document.getElementById('bold');
 const italicB = document.getElementById('italic');
+const underlineB = document.getElementById('underline');
+const leftB = document.getElementById('left');
+const centerB = document.getElementById('center');
+const rightB = document.getElementById('right');
+const justifyB = document.getElementById('justify')
 
 let undoStack = [];
 let redoStack = [];
@@ -43,6 +48,35 @@ boldB.addEventListener('click',() =>
 italicB.addEventListener('click',() =>
 {
     document.execCommand('italic');
+    saveState();
+});
+
+underlineB.addEventListener('click', () =>
+{
+    document.execCommand('underline');
+    saveState();
+});
+
+leftB.addEventListener('click', () => 
+{
+    document.execCommand('justifyLeft');
+    saveState();
+});
+
+centerB.addEventListener('click', () =>
+{
+    document.execCommand('justifyCenter');
+})
+
+rightB.addEventListener('click', () =>
+{
+    document.execCommand('justifyRight');
+    saveState();
+});
+
+justifyB.addEventListener('click', () =>
+{
+    document.execCommand('justifyFull');
     saveState();
 });
 
