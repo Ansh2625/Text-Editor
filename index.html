@@ -7,30 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
-        <div id="tools">
-            <button id="undo">Undo</button>
-            <button id="redo">Redo</button>
-            <button id="bold">Bold</button>
-            <button id="italic">Italic</button>
-            <button id="underline">Underline</button>
-            <button id="left">Left</button>
-            <button id="center">Center</button>
-            <button id="right">Right</button>
-            <button id="justify">Justify</button>
-            <input type="color" id="color" title="Text Color">
-            <input type="color" id="bgColor" title="Background Color">
-            <select id="fontSize">
-                <option value="1">10pt</option>
-                <option value="2">12pt</option>
-                <option value="3">14pt</option>
-                <option value="4">18pt</option>
-                <option value="5">24pt</option>
-                <option value="6">32pt</option>
-                <option value="7">48pt</option>
-            </select>
+    <h1>Text Editor</h1>
+    <div id="wrapper">
+        <div id="container">
+            <div id="tools">
+                <button id="undo">Undo</button>
+                <button id="redo">Redo</button>
+                <button id="bold">Bold</button>
+                <button id="italic">Italic</button>
+                <button id="underline">Underline</button>
+                <button id="left">Left</button>
+                <button id="center">Center</button>
+                <button id="right">Right</button>
+                <button id="justify">Justify</button>
+                <input type="color" id="color" title="Text Color">
+                <input type="color" id="bgColor" title="Background Color">
+                <select id="fontSize">
+                    <option value="1">10pt</option>
+                    <option value="2">12pt</option>
+                    <option value="3">14pt</option>
+                    <option value="4">18pt</option>
+                    <option value="5">24pt</option>
+                    <option value="6">32pt</option>
+                    <option value="7">48pt</option>
+                </select>
+            </div>
+            <div id="editor" contenteditable="true" class="editor"></div>
         </div>
-        <div id="editor" contenteditable="true" class="editor"></div>
     </div>
     <script src="script.js"></script>
 </body>
