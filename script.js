@@ -7,7 +7,10 @@ const underlineB = document.getElementById('underline');
 const leftB = document.getElementById('left');
 const centerB = document.getElementById('center');
 const rightB = document.getElementById('right');
-const justifyB = document.getElementById('justify')
+const justifyB = document.getElementById('justify');
+const colorB = document.getElementById('color');
+const bgColorB = document.getElementById('bgColor');
+const fontSizeB = document.getElementById('fontSize');
 
 let undoStack = [];
 let redoStack = [];
@@ -79,6 +82,24 @@ justifyB.addEventListener('click', () =>
     document.execCommand('justifyFull');
     saveState();
 });
+
+colorB.addEventListener('change', () =>
+{
+    document.execCommand('foreColor',false,colorB.value);
+    saveState();
+});
+
+bgColorB.addEventListener('change', () =>
+{
+    document.execCommand('hiliteColor',false,bgColorB.value);
+    saveState();
+});
+
+fontSizeB.addEventListener('change', () =>
+{
+    document.execCommand('fontSize',false,fontSizeB.value);
+    saveState();
+})
 
 function saveState()
 {

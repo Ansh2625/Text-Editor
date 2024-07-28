@@ -32,6 +32,11 @@ button
     cursor: pointer;
 }
 
+button:disabled
+{
+    cursor: not-allowed;
+}
+
 .editor
 {
     height: 400px;
@@ -40,4 +45,9 @@ button
     outline: none;
     border: none;
     background-color: white;
+}
+
+input[type="color"], select
+{
+    margin-right: 10px;
 }
